@@ -1,0 +1,117 @@
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #fdd835, #ffecb3, #ffe082);
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ff7043;
+  color: white;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+header p {
+  font-size: 1.2em;
+}
+
+/* ANIMASI TEKS */
+.bounce-text {
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-10px);}
+}
+
+/* PRODUK */
+.products {
+  padding: 40px 20px;
+  text-align: center;
+}
+.products h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #d84315;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.4s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+.card h3 {
+  margin: 10px 0 5px;
+  color: #ff7043;
+}
+.price {
+  font-weight: bold;
+  color: #333;
+}
+
+/* ABOUT & ALAMAT */
+.about, .alamat {
+  padding: 40px 20px;
+}
+.about h2, .alamat h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #d84315;
+}
+ol li {
+  margin: 5px 0;
+}
+
+/* FOOTER */
+footer {
+  background: #ff7043;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+/* SNACK FLOATING ANIMATION */
+.snack-decor {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+.snack {
+  position: absolute;
+  bottom: -100px;
+  font-size: 2em;
+  animation: floatUp 10s infinite ease-in;
+}
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0);}
+  100% { transform: translateY(-1200px) rotate(360deg);}
+}
